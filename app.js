@@ -82,11 +82,19 @@ const selectItem = (event, img) => {
   if (item === -1) {
     element.classList.add('added');
     sliders.push(img);
-  } else {
+  } else {console.log(item)
     // alert('Hey, Already added !')
     element.classList.remove('added');
-    sliders.pop(img);
+    for( var i = 0; i < sliders.length; i++){ 
+    
+      if ( i == item) { 
+        // console.log(sliders)
+        sliders.splice(i, 1); 
+      }
+    // sliders.remove(img);
+    // console.log(sliders)
 
+    }
   }
 }
 
